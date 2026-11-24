@@ -1,6 +1,7 @@
 {
   "name": "read-guard",
-  "version": "0.1.0",
-  "description": "Suggest relevant line ranges before a large single-file cat command.",
+  "version": "0.2.0",
+  "description": "Find a symbol and read its line range on demand. Get an outline before a large single-file cat command.",
+  "skills": "./codex-skills/",
   "hooks": "./hooks/codex.json"
 }

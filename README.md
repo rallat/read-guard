@@ -43,6 +43,8 @@ codex plugin add read-guard@rallat-tools
 
 Open a fresh session, run `/hooks`, and review and trust the `PreToolUse` hook from `read-guard@rallat-tools`. Codex skips a newly installed hook until you trust it.
 
+For a question about a particular function, type, or caller, invoke `$read-guard:read-symbol` in your prompt. Codex can also select it automatically for matching questions. The skill finds the symbol, reads the relevant lines, and cites the source. It works independently of hook trust.
+
 Codex sends shell commands to its `Bash` hook. The adapter recognizes a literal `cat FILE` or `cat -- FILE`, optionally prefixed with `rtk` or `rtk proxy`. It accepts simple quoted paths with spaces and resolves the file relative to the working directory reported by the hook. Compound commands, pipes, flags, shell expansion, multiple operands and other tools pass through. The adapter never executes the incoming command.
 
 ## Behavior
