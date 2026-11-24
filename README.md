@@ -21,6 +21,17 @@ We also estimated what replacing each large whole-file read with a typical range
 
 The sessions involved different tasks, and the audit did not verify hook activation for each agent. Those limits leave the standalone plugin's effect on token usage and billing unmeasured.
 
+### Live Codex test
+
+On November 24, 2026, we ran two fresh, read-only sessions with Read Guard 0.2.0, Codex CLI 0.153.2, and `gpt-6-astra`. Each prompt asked about a named function in the same 366-line Python file and gave no hints about skills or tools. In both sessions, Codex loaded `read-symbol` automatically, located the function with `rg`, and used `sed` to read the relevant lines.
+
+| Function | Source range returned by `sed` | Lines returned | Answer verified |
+| --- | --- | ---: | --- |
+| `dispatch_window` | 330–366 | **37** | A rush order on an unknown lane gets `17`. An explicit override of `0` returns `0`. |
+| `queue_class` | 355–366 | **12** | A paused queue with a backlog of 50 returns `"held"` because the pause check runs first. |
+
+The counts cover the source excerpts returned by `sed`. Both sessions used `cat` to load skill and instruction files. Neither used it on the project source.
+
 ## Install
 
 Use a macOS or Linux environment with Bash, jq and shasum on PATH. The Codex adapter also requires Python 3. The catalogs below install the plugin from this repository.
