@@ -1,0 +1,6 @@
+{
+  "name": "read-guard",
+  "version": "0.1.0",
+  "description": "Suggest relevant line ranges before a large single-file cat command.",
+  "hooks": "./hooks/codex.json"
+}

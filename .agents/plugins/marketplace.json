@@ -1,0 +1,20 @@
+{
+  "name": "rallat-tools",
+  "interface": {
+    "displayName": "Rallat Tools"
+  },
+  "plugins": [
+    {
+      "name": "read-guard",
+      "source": {
+        "source": "local",
+        "path": "./plugins/read-guard"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

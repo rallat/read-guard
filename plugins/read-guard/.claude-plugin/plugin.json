@@ -1,0 +1,7 @@
+{
+  "name": "read-guard",
+  "version": "0.1.0",
+  "author": { "name": "rallat" },
+  "description": "Suggest relevant line ranges before a large whole-file read.",
+  "license": "MIT"
+}

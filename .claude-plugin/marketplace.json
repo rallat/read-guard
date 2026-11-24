@@ -1,0 +1,13 @@
+{
+  "name": "rallat-tools",
+  "owner": {
+    "name": "rallat"
+  },
+  "plugins": [
+    {
+      "name": "read-guard",
+      "source": "./plugins/read-guard",
+      "description": "Offer a line-range outline before reading a large file."
+    }
+  ]
+}
